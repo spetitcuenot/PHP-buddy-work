@@ -1,0 +1,39 @@
+
+<- Vertex ----------------------------------------------------------------------
+The Vertex class handles Vertex.
+
+Or from distinct x, y, z constitutives and additionnaly w and color:
+new Color( array( 'red' => 255, 'green' => 255, 'blue' => 255 ) );
+
+The class provides the following methods :
+
+float   getX();
+Returns the x value.
+
+void    setX(float $x);
+Set the x value.
+
+float   getY();
+Returns the y value.
+
+void    setY(float $y);
+Set the y value.
+
+float   getZ();
+Returns the z value.
+
+void    setZ(float $z);
+Set the z value.
+
+float   getW();
+Returns the w value.
+
+void    setW(float $w);
+Set the w value.
+
+Color   getColor();
+Returns the color value.
+
+void    setColor(Color $color);
+Set the color value.
+---------------------------------------------------------------------- Vertex ->

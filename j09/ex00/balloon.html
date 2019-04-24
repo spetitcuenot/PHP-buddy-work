@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Balloon</title>
+    </head>
+    <body>
+        <div id="balloon" style="height: 200px; width: 200px; background: red; border-radius: 360px;"></div>
+        <script>
+            const colors = ['red', 'green', 'blue']
+            const balloon = document.getElementById('balloon')
+
+            balloon.addEventListener('click', () => {
+                const { style: { background, width, height } } = balloon
+
+                balloon.style.background = colors[colors.indexOf(background) >= colors.length - 1 ?
+                    0 : colors.indexOf(background) + 1]
+                balloon.style.width = `${parseInt(width.slice(0, width.length - 2)) + 10 > 420 ?
+                    200 : parseInt(width.slice(0, width.length - 2)) + 10}px`
+                balloon.style.height = `${parseInt(height.slice(0, height.length - 2)) + 10 > 420 ?
+                    200 : parseInt(width.slice(0, width.length - 2)) + 10}px`
+            })
+
+            balloon.addEventListener('mouseleave', () => {
+                const { style: { background, width, height } } = balloon
+
+                balloon.style.background = colors[colors.indexOf(background) - 1 < 0 ?
+                    colors.length - 1 : colors.indexOf(background) - 1]
+                balloon.style.width = `${parseInt(width.slice(0, width.length - 2)) <= 200 ?
+                    200 : parseInt(width.slice(0, width.length - 2)) - 5}px`
+                balloon.style.height = `${parseInt(height.slice(0, height.length - 2)) <= 200 ?
+                    200 : parseInt(width.slice(0, width.length - 2)) - 5}px`
+            })
+        </script>
+    </body>
+</html>

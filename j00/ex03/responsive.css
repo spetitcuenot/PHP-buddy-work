@@ -1,0 +1,99 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.atom {
+	margin-right: 0.1vw;
+	margin-bottom: 0.1vw;
+	padding: 0.1vw;
+	border: 2px solid #000;
+	font-size: 0.5vw;
+}
+
+.atom-desin {
+	border-style: dashed;
+}
+
+.atom-synth {
+	border-style: dotted;
+}
+
+.atom-none {
+	border-color: #fff;
+}
+
+.atom-symbol {
+	font-size: 0.7vw;
+	margin: 0.7vw;
+	display: flex;
+	justify-content: center;
+}
+
+.atom-weight {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.atom-green {
+	background: #9ccc65;
+	color: #fff;
+}
+
+.atom-blue {
+	background: #64B5F6;
+	color: #fff;
+}
+
+.atom-red {
+	background: #e57373;
+	color: #fff;
+}
+
+.atom-yellow {
+	background: #fdd835;
+	color: #fff;
+}
+
+.atom-brown {
+	background: #8d6e63;
+	color: #fff;
+}
+
+.atom-grey {
+	background: #cfd8dc;
+	color: #fff;
+}
+
+.atom-purple {
+	background: #80deea;
+	color: #fff;
+}
+
+.atom-teal {
+	background: #80cbc4;
+	color: #fff;
+}
+
+.atom-indigo {
+	background: #7986cb;
+	color: #fff;
+}
+
+.atom-rose {
+	background: #f48fb1;
+	color: #fff;
+}
+
+.banner {
+	background: url(https://cdn.pixabay.com/photo/2017/01/18/10/43/banner-1989514_960_720.png);
+	width: 100%;
+	height: 100px;
+	color: #fff;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.banner h1 {
+	margin-top: 0;
+	padding-top: 30px;
+}

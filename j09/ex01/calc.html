@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculette</title>
+
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+                background: rgb(200, 191, 215);
+            }
+
+            input:focus, select:focus {
+                outline: none;
+            }
+
+            input[type="text"] {
+                background: rgb(235, 246, 255);
+                border: none;
+                padding: 7px;
+                border-radius: 3px;
+            }
+
+            input[type="submit"] {
+                padding: 7px;
+                background: rgb(241, 152, 54);
+                color: #fff;
+                border: none;
+                border-radius: 3px;
+                font-weight: 500;
+            }
+
+            select {
+                padding: 7px;
+                -webkit-appearance: listitem;
+                background: rgb(241, 152, 54);
+                color: #fff;
+            }
+
+            input[type="submit"]:focus, select:focus {
+                background: rgb(244, 178, 98);
+            }
+        </style>
+    </head>
+    <body>
+        <form id="calc">
+            <input type="text" placeholder="Nombre 1" name="nbr1">
+            <select name="op">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+            <input type="text" placeholder="Nombre 2" name="nbr2">
+            <input type="submit" value="Try me!">
+        </form>
+        <script>
+            const operations = {
+                '+': (n1, n2) => n1 + n2,
+                '-': (n1, n2) => n1 - n2,
+                '*': (n1, n2) => n1 * n2,
+                '/': (n1, n2) => n1 / n2,
+                '%': (n1, n2) => n1 % n2,
+            }
+
+            document.getElementById('calc').addEventListener('submit', (event) => {
+                event.preventDefault()
+                const { target: [ { value: nbr1 }, { value: op }, { value: nbr2 } ] } = event
+                const n1 = parseInt(nbr1)
+                const n2 = parseInt(nbr2)
+
+                if (isNaN(n1) || isNaN(n2) || n1 < 0 || n2 < 0) {
+                    alert('Error :(')
+                    return
+                }
+
+                if ((op === '%' || op === '/') && !n2) {
+                    console.log("It’s over 9000!")
+                    alert("It’s over 9000!")
+                    return
+                }
+
+                const result = operations[op](n1, n2)
+                console.log(result)
+                alert(result)
+            })
+
+            setInterval(() => {
+                alert('Please, use me...')
+            }, 30000)
+        </script>
+    </body>
+</html>

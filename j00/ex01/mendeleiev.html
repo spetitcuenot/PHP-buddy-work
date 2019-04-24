@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Tableau de Mendeleïev</title>
+		<style>
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+			}
+
+			.atom {
+				height: 100px;
+				width: 100px;
+				margin-right: 5px;
+				margin-bottom: 5px;
+				padding: 7px;
+				border: 2px solid #000;
+				font-size: 12px;
+			}
+
+			.atom-desin {
+				border-style: dashed;
+			}
+
+			.atom-synth {
+				border-style: dotted;
+			}
+
+			.atom-none {
+				border-color: #fff;
+			}
+
+			.atom-symbol {
+				font-size: 24px;
+				margin: 15px;
+				display: flex;
+				justify-content: center;
+			}
+
+			.atom-weight {
+				display: flex;
+				justify-content: flex-end;
+			}
+
+			.atom-green {
+				background: #9ccc65;
+				color: #fff;
+			}
+
+			.atom-blue {
+				background: #64B5F6;
+				color: #fff;
+			}
+
+			.atom-red {
+				background: #e57373;
+				color: #fff;
+			}
+
+			.atom-yellow {
+				background: #fdd835;
+				color: #fff;
+			}
+
+			.atom-brown {
+				background: #8d6e63;
+				color: #fff;
+			}
+
+			.atom-grey {
+				background: #cfd8dc;
+				color: #fff;
+			}
+
+			.atom-purple {
+				background: #80deea;
+				color: #fff;
+			}
+
+			.atom-teal {
+				background: #80cbc4;
+				color: #fff;
+			}
+
+			.atom-indigo {
+				background: #7986cb;
+				color: #fff;
+			}
+
+			.atom-rose {
+				background: #f48fb1;
+				color: #fff;
+			}
+
+			.banner {
+				background: url(https://cdn.pixabay.com/photo/2017/01/18/10/43/banner-1989514_960_720.png);
+				width: 100%;
+				height: 100px;
+				color: #fff;
+				text-align: center;
+				margin-bottom: 30px;
+			}
+
+			.banner h1 {
+				margin-top: 0;
+				padding-top: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="banner">
+			<h1>Tableau périodique</h1>
+		</div>
+		<table style="width: 100%;">
+			<tbody>
+				<tr class="line">
+					<td class="atom atom-green" contenteditable>
+						<div class="atom-weight">1,007975</div>
+						<div class="atom-symbol">H</div>
+						<div class="atom-no">1</div>
+					</td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-blue" contenteditable>
+						<div class="atom-weight">4,002602</div>
+						<div class="atom-symbol">He</div>
+						<div class="atom-no">2</div>
+
+					</td>
+				</tr>
+				<tr class="line">
+					<td class="atom atom-red" contenteditable>
+						<div class="atom-weight">6,9395</div>
+<div class="atom-symbol">Li</div>
+<div class="atom-no">3</div>
+
+					</td>
+					<td class="atom atom-yellow" contenteditable>
+						<div class="atom-weight">9,0121831</div>
+<div class="atom-symbol">Be</div>
+<div class="atom-no">4</div>
+
+					</td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-brown" contenteditable>
+						<div class="atom-weight">10,8135</div>
+<div class="atom-symbol">B</div>
+<div class="atom-no">5</div>
+
+					</td>
+					<td class="atom atom-green" contenteditable>
+						<div class="atom-weight">12,0106</div>
+<div class="atom-symbol">C</div>
+<div class="atom-no">6</div>
+
+					</td>
+					<td class="atom atom-green" contenteditable>
+						<div class="atom-weight">14,006855</div>
+<div class="atom-symbol">N</div>
+<div class="atom-no">7</div>
+
+					</td>
+					<td class="atom atom-green" contenteditable>
+						<div class="atom-weight">15,99940</div>
+<div class="atom-symbol">O</div>
+<div class="atom-no">8</div>
+
+					</td>
+					<td class="atom atom-yellow" contenteditable>
+						<div class="atom-weight">18,99840316</div>
+<div class="atom-symbol">F</div>
+<div class="atom-no">9</div>
+
+					</td>
+					<td class="atom atom-blue" contenteditable>
+						<div class="atom-weight">20,1797</div>
+<div class="atom-symbol">Ne</div>
+<div class="atom-no">10</div>
+
+					</td>
+				</tr>
+				<tr class="line">
+					<td class="atom atom-red" contenteditable>
+						<div class="atom-weight">22,98976928</div>
+<div class="atom-symbol">Na</div>
+<div class="atom-no">11</div>
+
+					</td>
+					<td class="atom atom-yellow" contenteditable>
+						<div class="atom-weight">24,3055</div>
+<div class="atom-symbol">Mg</div>
+<div class="atom-no">12</div>
+
+					</td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-grey" contenteditable>
+						<div class="atom-weight">26,9815385</div>
+<div class="atom-symbol">Al</div>
+<div class="atom-no">13</div>
+
+					</td>
+					<td class="atom atom-brown" contenteditable>
+						<div class="atom-weight">28,085</div>
+<div class="atom-symbol">Si</div>
+<div class="atom-no">14</div>
+
+					</td>
+					<td class="atom atom-green" contenteditable>
+						<div class="atom-weight">30,97376200</div>
+<div class="atom-symbol">P</div>
+<div class="atom-no">15</div>
+
+					</td>
+					<td class="atom atom-green" contenteditable>
+						<div class="atom-weight">32,0675</div>
+<div class="atom-symbol">S</div>
+<div class="atom-no">16</div>
+
+					</td>
+					<td class="atom atom-yellow" contenteditable>
+						<div class="atom-weight">35,4515</div>
+<div class="atom-symbol">Cl</div>
+<div class="atom-no">17</div>
+
+					</td>
+					<td class="atom atom-blue" contenteditable>
+						<div class="atom-weight">39,948</div>
+<div class="atom-symbol">Ar</div>
+<div class="atom-no">18</div>
+
+					</td>
+				</tr>
+				<tr class="line">
+					<td class="atom atom-red" contenteditable>
+						<div class="atom-weight">39,0983</div>
+<div class="atom-symbol">K</div>
+<div class="atom-no">19</div>
+
+					</td>
+					<td class="atom atom-yellow" contenteditable>
+						<div class="atom-weight">40,078</div>
+<div class="atom-symbol">Ca</div>
+<div class="atom-no">20</div>
+
+					</td>
+					<td class="atom atom-rose" contenteditable>
+						<div class="atom-weight">44,955908</div>
+<div class="atom-symbol">Sc</div>
+<div class="atom-no">21</div>
+
+					</td>
+					<td class="atom atom-rose" contenteditable>
+						<div class="atom-weight">47,867</div>
+<div class="atom-symbol">Ti</div>
+<div class="atom-no">22</div>
+
+					</td>
+					<td class="atom atom-rose" contenteditable>
+						<div class="atom-weight">50,9415</div>
+<div class="atom-symbol">V</div>
+<div class="atom-no">23</div>
+
+					</td>
+					<td class="atom atom-rose" contenteditable>
+						<div class="atom-weight">51,9961</div>
+<div class="atom-symbol">Cr</div>
+<div class="atom-no">24</div>
+
+					</td>
+					<td class="atom atom-rose" contenteditable>
+						<div class="atom-weight">54,938044</div>
+<div class="atom-symbol">Mn</div>
+<div class="atom-no">25</div>
+
+					</td>
+					<td class="atom atom-rose" contenteditable>
+						<div class="atom-weight">55,845</div>
+<div class="atom-symbol">Fe</div>
+<div class="atom-no">26</div>
+
+					</td>
+					<td class="atom atom-rose" contenteditable>
+						<div class="atom-weight">58,933194</div>
+<div class="atom-symbol">Co</div>
+<div class="atom-no">27</div>
+
+					</td>
+					<td class="atom atom-rose" contenteditable>
+						<div class="atom-weight">58,6934</div>
+<div class="atom-symbol">Ni</div>
+<div class="atom-no">28</div>
+
+					</td>
+					<td class="atom atom-rose" contenteditable>
+						<div class="atom-weight">63,546</div>
+<div class="atom-symbol">Cu</div>
+<div class="atom-no">29</div>
+
+					</td>
+					<td class="atom atom-grey" contenteditable>
+						<div class="atom-weight">65,38</div>
+<div class="atom-symbol">Zn</div>
+<div class="atom-no">30</div>
+
+					</td>
+					<td class="atom atom-grey" contenteditable>
+						<div class="atom-weight">69,723</div>
+<div class="atom-symbol">Ga</div>
+<div class="atom-no">31</div>
+
+					</td>
+					<td class="atom atom-brown" contenteditable>
+						<div class="atom-weight">72,630</div>
+<div class="atom-symbol">Ge</div>
+<div class="atom-no">32</div>
+
+					</td>
+					<td class="atom atom-brown" contenteditable>
+						<div class="atom-weight">74,921595</div>
+<div class="atom-symbol">As</div>
+<div class="atom-no">33</div>
+
+					</td>
+					<td class="atom atom-green" contenteditable>
+						<div class="atom-weight">78,971</div>
+<div class="atom-symbol">Se</div>
+<div class="atom-no">34</div>
+
+					</td>
+					<td class="atom atom-yellow" contenteditable>
+						<div class="atom-weight">79,904</div>
+<div class="atom-symbol">Br</div>
+<div class="atom-no">35</div>
+
+					</td>
+					<td class="atom atom-blue" contenteditable>
+						<div class="atom-weight">83,798</div>
+<div class="atom-symbol">Kr</div>
+<div class="atom-no">36</div>
+
+					</td>
+				</tr>
+				<tr class="line">
+					<td class="atom atom-red" contenteditable>
+						<div class="atom-weight">85,4678</div>
+<div class="atom-symbol">Rb</div>
+<div class="atom-no">37</div>
+
+					</td>
+					<td class="atom atom-yellow" contenteditable>
+						<div class="atom-weight">87,62</div>
+<div class="atom-symbol">Sr</div>
+<div class="atom-no">38</div>
+
+					</td>
+					<td class="atom atom-rose" contenteditable>
+						<div class="atom-weight">88,90584</div>
+<div class="atom-symbol">Y</div>
+<div class="atom-no">39</div>
+
+					</td>
+					<td class="atom atom-rose" contenteditable>
+						<div class="atom-weight">91,224</div>
+<div class="atom-symbol">Zr</div>
+<div class="atom-no">40</div>
+
+					</td>
+					<td class="atom atom-rose" contenteditable>
+						<div class="atom-weight">92,90637</div>
+<div class="atom-symbol">Nb</div>
+<div class="atom-no">41</div>
+
+					</td>
+					<td class="atom atom-rose" contenteditable>
+						<div class="atom-weight">95,95</div>
+<div class="atom-symbol">Mo</div>
+<div class="atom-no">42</div>
+
+					</td>
+					<td class="atom atom-rose" contenteditable>
+						<div class="atom-weight">98</div>
+<div class="atom-symbol">Tc</div>
+<div class="atom-no">43</div>
+
+					</td>
+					<td class="atom atom-rose" contenteditable>
+						<div class="atom-weight">101,07</div>
+<div class="atom-symbol">Ru</div>
+<div class="atom-no">44</div>
+
+					</td>
+					<td class="atom atom-rose" contenteditable>
+						<div class="atom-weight">102,90550</div>
+<div class="atom-symbol">Rh</div>
+<div class="atom-no">45</div>
+
+					</td>
+					<td class="atom atom-rose" contenteditable>
+						<div class="atom-weight">106,42</div>
+<div class="atom-symbol">Pd</div>
+<div class="atom-no">46</div>
+
+					</td>
+					<td class="atom atom-rose" contenteditable>
+						<div class="atom-weight">107,8682</div>
+<div class="atom-symbol">Ag</div>
+<div class="atom-no">47</div>
+
+					</td>
+					<td class="atom atom-grey" contenteditable>
+						<div class="atom-weight">112,414</div>
+<div class="atom-symbol">Cd</div>
+<div class="atom-no">48</div>
+
+					</td>
+					<td class="atom atom-grey" contenteditable>
+						<div class="atom-weight">114,818</div>
+<div class="atom-symbol">In</div>
+<div class="atom-no">49</div>
+
+					</td>
+					<td class="atom atom-grey" contenteditable>
+						<div class="atom-weight">118,710</div>
+<div class="atom-symbol">Sn</div>
+<div class="atom-no">50</div>
+
+					</td>
+					<td class="atom atom-brown" contenteditable>
+						<div class="atom-weight">121,760</div>
+<div class="atom-symbol">Sb</div>
+<div class="atom-no">51</div>
+
+					</td>
+					<td class="atom atom-brown" contenteditable>
+						<div class="atom-weight">127,60</div>
+<div class="atom-symbol">Te</div>
+<div class="atom-no">52</div>
+
+					</td>
+					<td class="atom atom-yellow" contenteditable>
+						<div class="atom-weight">126,90447</div>
+<div class="atom-symbol">I</div>
+<div class="atom-no">53</div>
+
+					</td>
+					<td class="atom atom-blue" contenteditable>
+						<div class="atom-weight">131,293</div>
+<div class="atom-symbol">Xe</div>
+<div class="atom-no">54</div>
+
+					</td>
+				</tr>
+				<tr class="line">
+					<td class="atom atom-red" contenteditable>
+						<div class="atom-weight">132,905452</div>
+<div class="atom-symbol">Cs</div>
+<div class="atom-no">55</div>
+
+					</td>
+					<td class="atom atom-yellow" contenteditable>
+						<div class="atom-weight">137,327</div>
+<div class="atom-symbol">Ba</div>
+<div class="atom-no">56</div>
+
+					</td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-rose" contenteditable>
+						<div class="atom-weight">178,49</div>
+<div class="atom-symbol">Hf</div>
+<div class="atom-no">72</div>
+
+					</td>
+					<td class="atom atom-rose" contenteditable>
+						<div class="atom-weight">180,94788</div>
+<div class="atom-symbol">Ta</div>
+<div class="atom-no">73</div>
+
+					</td>
+					<td class="atom atom-rose" contenteditable>
+						<div class="atom-weight">183,84</div>
+<div class="atom-symbol">W</div>
+<div class="atom-no">74</div>
+
+					</td>
+					<td class="atom atom-rose" contenteditable>
+						<div class="atom-weight">186,207</div>
+<div class="atom-symbol">Re</div>
+<div class="atom-no">75</div>
+
+					</td>
+					<td class="atom atom-rose" contenteditable>
+						<div class="atom-weight">190,23</div>
+<div class="atom-symbol">Os</div>
+<div class="atom-no">76</div>
+
+					</td>
+					<td class="atom atom-rose" contenteditable>
+						<div class="atom-weight">192,217</div>
+<div class="atom-symbol">Ir</div>
+<div class="atom-no">77</div>
+
+					</td>
+					<td class="atom atom-rose" contenteditable>
+						<div class="atom-weight">195,084</div>
+<div class="atom-symbol">Pt</div>
+<div class="atom-no">78</div>
+
+					</td>
+					<td class="atom atom-rose" contenteditable>
+						<div class="atom-weight">196,966569</div>
+<div class="atom-symbol">Au</div>
+<div class="atom-no">79</div>
+
+					</td>
+					<td class="atom atom-grey" contenteditable>
+						<div class="atom-weight">200,592</div>
+<div class="atom-symbol">Hg</div>
+<div class="atom-no">80</div>
+
+					</td>
+					<td class="atom atom-grey" contenteditable>
+						<div class="atom-weight">204,3835</div>
+<div class="atom-symbol">Tl</div>
+<div class="atom-no">81</div>
+
+					</td>
+					<td class="atom atom-grey" contenteditable>
+						<div class="atom-weight">207,2</div>
+<div class="atom-symbol">Pb</div>
+<div class="atom-no">82</div>
+
+					</td>
+					<td class="atom atom-grey" contenteditable>
+						<div class="atom-weight">208,98040</div>
+<div class="atom-symbol">Bi</div>
+<div class="atom-no">83</div>
+
+					</td>
+					<td class="atom atom-grey atom-desin" contenteditable>
+						<div class="atom-weight">209</div>
+<div class="atom-symbol">Po</div>
+<div class="atom-no">84</div>
+
+					</td>
+					<td class="atom atom-brown atom-desin" contenteditable>
+						<div class="atom-weight">210</div>
+<div class="atom-symbol">At</div>
+<div class="atom-no">85</div>
+
+					</td>
+					<td class="atom atom-blue atom-desin" contenteditable>
+						<div class="atom-weight">222</div>
+<div class="atom-symbol">Rn</div>
+<div class="atom-no">86</div>
+
+					</td>
+				</tr>
+				<tr class="line">
+					<td class="atom atom-red atom-desin" contenteditable>
+						<div class="atom-weight">223</div>
+<div class="atom-symbol">Fr</div>
+<div class="atom-no">87</div>
+
+					</td>
+					<td class="atom atom-yellow atom-desin" contenteditable>
+						<div class="atom-weight">226</div>
+<div class="atom-symbol">Ra</div>
+<div class="atom-no">88</div>
+
+					</td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-rose atom-synth" contenteditable>
+						<div class="atom-weight">267</div>
+<div class="atom-symbol">Rf</div>
+<div class="atom-no">104</div>
+
+					</td>
+					<td class="atom atom-rose atom-synth" contenteditable>
+						<div class="atom-weight">268</div>
+<div class="atom-symbol">Db</div>
+<div class="atom-no">105</div>
+
+					</td>
+					<td class="atom atom-rose atom-synth" contenteditable>
+						<div class="atom-weight">269</div>
+<div class="atom-symbol">Sg</div>
+<div class="atom-no">106</div>
+
+					</td>
+					<td class="atom atom-rose atom-synth" contenteditable>
+						<div class="atom-weight">270</div>
+<div class="atom-symbol">Bh</div>
+<div class="atom-no">107</div>
+
+					</td>
+					<td class="atom atom-rose atom-synth" contenteditable>
+						<div class="atom-weight">277</div>
+<div class="atom-symbol">Hs</div>
+<div class="atom-no">108</div>
+
+					</td>
+					<td class="atom atom-purple atom-synth" contenteditable>
+						<div class="atom-weight">278</div>
+<div class="atom-symbol">Mt</div>
+<div class="atom-no">109</div>
+
+					</td>
+					<td class="atom atom-purple atom-synth" contenteditable>
+						<div class="atom-weight">281</div>
+<div class="atom-symbol">Ds</div>
+<div class="atom-no">110</div>
+
+					</td>
+					<td class="atom atom-purple atom-synth" contenteditable>
+						<div class="atom-weight">282</div>
+<div class="atom-symbol">Rg</div>
+<div class="atom-no">111</div>
+
+					</td>
+					<td class="atom atom-rose atom-synth" contenteditable>
+						<div class="atom-weight">285</div>
+<div class="atom-symbol">Cn</div>
+<div class="atom-no">112</div>
+
+					</td>
+					<td class="atom atom-purple atom-synth" contenteditable>
+						<div class="atom-weight">286</div>
+<div class="atom-symbol">Nh</div>
+<div class="atom-no">113</div>
+
+					</td>
+					<td class="atom atom-purple atom-synth" contenteditable>
+						<div class="atom-weight">289</div>
+<div class="atom-symbol">Fl</div>
+<div class="atom-no">114</div>
+
+					</td>
+					<td class="atom atom-purple atom-synth" contenteditable>
+						<div class="atom-weight">289</div>
+<div class="atom-symbol">Mc</div>
+<div class="atom-no">115</div>
+
+					</td>
+					<td class="atom atom-purple atom-synth" contenteditable>
+						<div class="atom-weight">293</div>
+<div class="atom-symbol">Lv</div>
+<div class="atom-no">116</div>
+
+					</td>
+					<td class="atom atom-purple atom-synth" contenteditable>
+						<div class="atom-weight">294</div>
+<div class="atom-symbol">Ts</div>
+<div class="atom-no">117</div>
+
+					</td>
+					<td class="atom atom-purple atom-synth" contenteditable>
+						<div class="atom-weight">294</div>
+<div class="atom-symbol">Og</div>
+<div class="atom-no">118</div>
+
+					</td>
+				</tr>
+				<tr class="line" style="margin-top: 40px">
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-teal" contenteditable>
+						<div class="atom-weight">138,90547</div>
+<div class="atom-symbol">La</div>
+<div class="atom-no">57</div>
+
+					</td>
+					<td class="atom atom-teal" contenteditable>
+						<div class="atom-weight">140,116</div>
+<div class="atom-symbol">Ce</div>
+<div class="atom-no">58</div>
+
+					</td>
+					<td class="atom atom-teal" contenteditable>
+						<div class="atom-weight">140,90766</div>
+<div class="atom-symbol">Pr</div>
+<div class="atom-no">59</div>
+
+					</td>
+					<td class="atom atom-teal" contenteditable>
+						<div class="atom-weight">144,90766</div>
+<div class="atom-symbol">Nd</div>
+<div class="atom-no">60</div>
+
+					</td>
+					<td class="atom atom-teal" contenteditable>
+						<div class="atom-weight">145</div>
+<div class="atom-symbol">Pm</div>
+<div class="atom-no">61</div>
+
+					</td>
+					<td class="atom atom-teal" contenteditable>
+						<div class="atom-weight">150,36</div>
+<div class="atom-symbol">Sm</div>
+<div class="atom-no">62</div>
+
+					</td>
+					<td class="atom atom-teal" contenteditable>
+						<div class="atom-weight">151,964</div>
+<div class="atom-symbol">Eu</div>
+<div class="atom-no">63</div>
+
+					</td>
+					<td class="atom atom-teal" contenteditable>
+						<div class="atom-weight">157,25</div>
+<div class="atom-symbol">Gd</div>
+<div class="atom-no">64</div>
+
+					</td>
+					<td class="atom atom-teal" contenteditable>
+						<div class="atom-weight">158,92535</div>
+<div class="atom-symbol">Tb</div>
+<div class="atom-no">65</div>
+
+					</td>
+					<td class="atom atom-teal" contenteditable>
+						<div class="atom-weight">162,500</div>
+<div class="atom-symbol">Dy</div>
+<div class="atom-no">66</div>
+
+					</td>
+					<td class="atom atom-teal" contenteditable>
+						<div class="atom-weight">164,93033</div>
+<div class="atom-symbol">Ho</div>
+<div class="atom-no">67</div>
+
+					</td>
+					<td class="atom atom-teal" contenteditable>
+						<div class="atom-weight">167,259</div>
+<div class="atom-symbol">Er</div>
+<div class="atom-no">68</div>
+
+					</td>
+					<td class="atom atom-teal" contenteditable>
+						<div class="atom-weight">168,93422</div>
+<div class="atom-symbol">Tm</div>
+<div class="atom-no">69</div>
+
+					</td>
+					<td class="atom atom-teal" contenteditable>
+						<div class="atom-weight">173,045</div>
+<div class="atom-symbol">Yb</div>
+<div class="atom-no">70</div>
+
+					</td>
+					<td class="atom atom-teal" contenteditable>
+						<div class="atom-weight">174,9668</div>
+<div class="atom-symbol">Lu</div>
+<div class="atom-no">71</div>
+
+					</td>
+				</tr>
+				<tr class="line">
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-none"></td>
+					<td class="atom atom-indigo atom-desin" contenteditable>
+						<div class="atom-weight">227</div>
+<div class="atom-symbol">Ac</div>
+<div class="atom-no">89</div>
+
+					</td>
+					<td class="atom atom-indigo" contenteditable>
+						<div class="atom-weight">232,0377</div>
+<div class="atom-symbol">Th</div>
+<div class="atom-no">90</div>
+
+					</td>
+					<td class="atom atom-indigo atom-desin" contenteditable>
+						<div class="atom-weight">231,03588</div>
+<div class="atom-symbol">Pa</div>
+<div class="atom-no">91</div>
+
+					</td>
+					<td class="atom atom-indigo" contenteditable>
+						<div class="atom-weight">238,02891</div>
+<div class="atom-symbol">U</div>
+<div class="atom-no">92</div>
+
+					</td>
+					<td class="atom atom-indigo atom-desin" contenteditable>
+						<div class="atom-weight">237</div>
+<div class="atom-symbol">Np</div>
+<div class="atom-no">93</div>
+
+					</td>
+					<td class="atom atom-indigo atom-desin" contenteditable>
+						<div class="atom-weight">244</div>
+<div class="atom-symbol">Pu</div>
+<div class="atom-no">94</div>
+
+					</td>
+					<td class="atom atom-indigo atom-synth" contenteditable>
+						<div class="atom-weight">243</div>
+<div class="atom-symbol">Am</div>
+<div class="atom-no">95</div>
+
+					</td>
+					<td class="atom atom-indigo atom-synth" contenteditable>
+						<div class="atom-weight">247</div>
+<div class="atom-symbol">Cm</div>
+<div class="atom-no">96</div>
+
+					</td>
+					<td class="atom atom-indigo atom-synth" contenteditable>
+						<div class="atom-weight">247</div>
+<div class="atom-symbol">Nk</div>
+<div class="atom-no">97</div>
+
+					</td>
+					<td class="atom atom-indigo atom-synth" contenteditable>
+						<div class="atom-weight">251</div>
+<div class="atom-symbol">Cf</div>
+<div class="atom-no">98</div>
+
+					</td>
+					<td class="atom atom-indigo atom-synth" contenteditable>
+						<div class="atom-weight">252</div>
+<div class="atom-symbol">Es</div>
+<div class="atom-no">99</div>
+
+					</td>
+					<td class="atom atom-indigo atom-synth" contenteditable>
+						<div class="atom-weight">257</div>
+<div class="atom-symbol">Fm</div>
+<div class="atom-no">100</div>
+
+					</td>
+					<td class="atom atom-indigo atom-synth" contenteditable>
+						<div class="atom-weight">258</div>
+<div class="atom-symbol">Md</div>
+<div class="atom-no">101</div>
+
+					</td>
+					<td class="atom atom-indigo atom-synth" contenteditable>
+						<div class="atom-weight">259</div>
+<div class="atom-symbol">No</div>
+<div class="atom-no">102</div>
+
+					</td>
+					<td class="atom atom-indigo atom-synth" contenteditable>
+						<div class="atom-weight">266</div>
+<div class="atom-symbol">Lr</div>
+<div class="atom-no">103</div>
+
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
